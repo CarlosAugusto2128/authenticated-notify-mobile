@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Image, Text} from 'react-native';
+import React from 'react';
+import {Image} from 'react-native';
 
 import {
   ContainerBackground,
@@ -13,19 +13,13 @@ import {
   BtnRegister,
 } from './styles';
 
-export default function Sign() {
-  const [isVisibleSignIn, setIsVisibleSignIn] = useState(false);
-
-  function handleVisibleSignIn() {
-    setIsVisibleSignIn(!isVisibleSignIn);
-  }
-
+export default function SignIn({navigation}) {
   return (
     <ContainerBackground
       source={require('../../assets/Images/backgroundImage.jpg')}>
       <BackgroundGray />
       <Image source={require('../../assets/Images/logoImage.png')} />
-      <ContentSignIn isVisibleSignIn={isVisibleSignIn}>
+      <ContentSignIn>
         <FormSignIn>
           <InputSign>
             <InputText placeholder="Email:" />
@@ -36,7 +30,7 @@ export default function Sign() {
           <BtnSignIn>
             <BtnText>Acessar</BtnText>
           </BtnSignIn>
-          <BtnRegister onPress={handleVisibleSignIn}>
+          <BtnRegister onPress={() => navigation.navigate('SignUp')}>
             <BtnText>Não possui cadastro? Cadastra-se!!</BtnText>
           </BtnRegister>
         </FormSignIn>

@@ -8,6 +8,7 @@ export const ContainerBackground = styled.ImageBackground`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  /* padding: 0 30px; */
   position: relative;
 `;
 
@@ -26,6 +27,11 @@ export const ContentSignIn = styled.View`
   border-radius: 4px;
 `;
 
+export const ContentSignUp = styled.View`
+  width: 90%;
+  padding: 20px;
+  border-radius: 4px;
+`;
 export const FormSignIn = styled.View``;
 
 export const InputSign = styled.View`
