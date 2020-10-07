@@ -19,9 +19,9 @@ export default function SignUp({navigation}) {
       <Image source={require('../../assets/Images/logoImage.png')} />
       <ContentSignUp>
         <FormSignUp>
-          <Input placeholder="Name:" />
-          <Input placeholder="Email:" />
-          <Input placeholder="Senha:" type="password" />
+          <Input icon={'user'} placeholder="Name:" />
+          <Input icon={'mail'} placeholder="Email:" />
+          <Input icon={'lock'} placeholder="Senha:" type="password" />
 
           <Button>Cadastrar-se</Button>
 

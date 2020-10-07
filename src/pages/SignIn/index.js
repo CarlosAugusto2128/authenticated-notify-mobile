@@ -19,8 +19,8 @@ export default function SignIn({navigation}) {
       <Image source={require('../../assets/Images/logoImage.png')} />
       <ContentSignIn>
         <FormSignIn>
-          <Input placeholder="Email:" />
-          <Input placeholder="Senha:" type="password" />
+          <Input icon={'mail'} placeholder="Email:" />
+          <Input icon={'lock'} placeholder="Senha:" type="password" />
 
           <Button onPress={() => {}}>Acessar</Button>
           <Button onPress={() => navigation.navigate('SignUp')}>
