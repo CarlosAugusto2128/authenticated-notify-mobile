@@ -1,16 +1,14 @@
 import React from 'react';
 import {Image} from 'react-native';
 
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+
 import {
   ContainerBackground,
   ContentSignUp,
   FormSignUp,
-  InputSign,
-  InputText,
   BackgroundGray,
-  BtnSignUp,
-  BtnText,
-  BtnRegister,
 } from './styles';
 
 export default function SignUp({navigation}) {
@@ -21,21 +19,15 @@ export default function SignUp({navigation}) {
       <Image source={require('../../assets/Images/logoImage.png')} />
       <ContentSignUp>
         <FormSignUp>
-          <InputSign>
-            <InputText placeholder="Name:" />
-          </InputSign>
-          <InputSign>
-            <InputText placeholder="Email:" />
-          </InputSign>
-          <InputSign>
-            <InputText placeholder="Senha:" type="password" />
-          </InputSign>
-          <BtnSignUp>
-            <BtnText>Cadastrar-se</BtnText>
-          </BtnSignUp>
-          <BtnRegister onPress={() => navigation.goBack()}>
-            <BtnText>Já possui cadastro? Logue-se!!</BtnText>
-          </BtnRegister>
+          <Input placeholder="Name:" />
+          <Input placeholder="Email:" />
+          <Input placeholder="Senha:" type="password" />
+
+          <Button>Cadastrar-se</Button>
+
+          <Button onPress={() => navigation.goBack()}>
+            Já possui cadastro? Logue-se!!
+          </Button>
         </FormSignUp>
       </ContentSignUp>
     </ContainerBackground>
